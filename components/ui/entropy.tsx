@@ -119,6 +119,7 @@ export function Entropy({ className = "", size = 400 }: EntropyProps) {
     let animationId: number
 
     function animate() {
+      if (!ctx) return
       ctx.clearRect(0, 0, size, size)
       if (time % 30 === 0) updateNeighbors()
 
